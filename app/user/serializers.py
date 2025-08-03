@@ -5,6 +5,7 @@ from rest_framework import serializers
 
 
 
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
@@ -45,3 +46,5 @@ class AuthTokenSerializer(serializers.Serializer):
             raise serializers.ValidationError(msg, code='authentication')
         attrs['user'] = user
         return attrs
+
+
